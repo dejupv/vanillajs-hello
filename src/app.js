@@ -1,11 +1,17 @@
-import "bootstrap";
-import "./style.css";
+window.onload = function () {
+  const who = ['The dog', 'My grandma', 'The mailman', 'My bird'];
+  const action = ['ate', 'peed on', 'crushed', 'broke'];
+  const what = ['my homework', 'my phone', 'the car'];
+  const when = [
+    'before the class',
+    'while I was sleeping',
+    'during my lunch',
+    'while I was praying'
+  ];
 
+  const random = arr => arr[Math.floor(Math.random() * arr.length)];
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+  const excuse = `${random(who)} ${random(action)} ${random(what)} ${random(when)}.`;
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
+  document.getElementById('excuse').innerText = excuse;
 };
